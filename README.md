@@ -16,6 +16,14 @@ A plain HTML/CSS/JS site. There is no build step: upload the folder as it is.
 
 Shared files live in `assets/` (`css/styles.css`, `js/main.js`, `favicon.svg`).
 
+All links use clean URLs (`/services`, not `services.html`). Cloudflare Pages serves them automatically and redirects any old `.html` address to the clean one.
+
+## Preview locally
+
+```n python serve.py
+```n
+Then open http://127.0.0.1:8080. The script behaves like Cloudflare: clean URLs work, `.html` addresses redirect, and missing pages show `404.html`. Opening the HTML files directly by double-clicking will not load styles, because links are root-relative.
+
 ## Deploy on Cloudflare Pages
 
 1. Cloudflare dashboard → **Workers & Pages** → **Create** → **Pages** → **Upload assets**.
@@ -24,7 +32,7 @@ Shared files live in `assets/` (`css/styles.css`, `js/main.js`, `favicon.svg`).
 
 If you use Git instead: connect the repo, leave the build command empty and set the output directory to `/`.
 
-Cloudflare serves `services.html` at `/services` automatically. `_headers` adds basic security headers, and `404.html` is used for missing pages.
+`_headers` adds basic security headers, and `404.html` is used for missing pages.
 
 ## Things to edit
 
