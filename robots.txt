@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://covernow.co.in/sitemap.xml
