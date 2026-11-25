@@ -20,7 +20,10 @@ All links use clean URLs (`/services`, not `services.html`). Cloudflare Pages se
 
 ## Preview locally
 
-```n python serve.py
+```
+python serve.py
+```
+
 ```n
 Then open http://127.0.0.1:8080. The script behaves like Cloudflare: clean URLs work, `.html` addresses redirect, and missing pages show `404.html`. Opening the HTML files directly by double-clicking will not load styles, because links are root-relative.
 
